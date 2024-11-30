@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
+const app = express();
 
 const allowedOrigins = ['https://autolikes.vercel.app', 'http://localhost:3000','http://localhost:5173'];
 
@@ -15,7 +16,7 @@ app.use(cors({
   }
 }));
 
-const app = express();
+
 
 let currentPrices = {}; // Object to store daily prices
 const usdToInrRate = 84; // Fixed conversion rate: 1 USD = 84 INR
